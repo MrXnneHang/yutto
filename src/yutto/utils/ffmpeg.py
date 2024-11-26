@@ -24,7 +24,12 @@ class FFmpeg(metaclass=Singleton):
         except FileNotFoundError:
             raise FFmpegNotFoundError from None
 
-        self.path = os.path.normpath(ffmpeg_path)
+        if ffmpeg_path = "ffmpeg":
+            # use system ffmpeg
+            self.path = os.path.normpath(ffmpeg_path)
+        else:
+            # use custom ffmpeg
+            self.path = ffmpeg_path
 
     def exec(self, args: list[str]):
         cmd = [self.path]
