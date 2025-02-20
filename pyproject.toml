@@ -22,7 +22,7 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: CPython",
 ]
 dependencies = [
-  "aiofiles>=24.1.0",
+  "aiofiles>22.0",
   "biliass==2.2.0",
   "colorama>=0.4.6; sys_platform == 'win32'",
   "typing-extensions>=4.12.2",
