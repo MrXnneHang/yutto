@@ -358,7 +358,7 @@ async def start_downloader(
     # 保存封面
     if cover_data is not None:
         cover_path.write_bytes(cover_data)
-        if options["save_cover"] or (not will_download_video and not will_download_audio):
+        if options["save_cover"] and (not will_download_audio and not will_download_video):
             Logger.custom("封面已生成", badge=Badge("封面", fore="black", back="cyan"))
 
     if output_path.exists():

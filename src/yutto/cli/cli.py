@@ -245,7 +245,7 @@ def cli() -> argparse.ArgumentParser:
     )
     group_resource.add_argument(
         "--save-cover",
-        default=settings.resource.save_cover,
+        default=settings.resource.require_cover,
         action="store_true",
         help="生成视频流封面后单独保存封面文件",
     )
