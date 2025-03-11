@@ -663,7 +663,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "aiofiles", specifier = ">=24.1.0" },
+    { name = "aiofiles", specifier = ">22.0" },
     { name = "biliass", editable = "packages/biliass" },
     { name = "colorama", marker = "sys_platform == 'win32'", specifier = ">=0.4.6" },
     { name = "dict2xml", specifier = ">=1.7.6" },

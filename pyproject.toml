@@ -14,19 +14,19 @@ classifiers = [
   "Typing :: Typed",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3.9",  
+  "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
-  "Programming Language :: Python :: 3.13",  
+  "Programming Language :: Python :: 3.13",
   "Programming Language :: Python :: Implementation :: CPython",
 ]
 dependencies = [
   "aiofiles>22.0",
-  "biliass==2.2.0",  
+  "biliass==2.2.0",
   "colorama>=0.4.6; sys_platform == 'win32'",
-  "typing-extensions>=4.12.2",  
-  "dict2xml>=1.7.6",  
+  "typing-extensions>=4.12.2",
+  "dict2xml>=1.7.6",
   "httpx[http2,socks]>=0.28.1",
   "tomli>=2.0.2; python_version < '3.11'",
   "pydantic>=2.10.6",
@@ -34,7 +34,7 @@ dependencies = [
 
 [project.urls]
 Homepage = "https://github.com/yutto-dev/yutto"
-Documentation = "https://github.com/yutto-dev/yutto"  
+Documentation = "https://github.com/yutto-dev/yutto"
 Repository = "https://github.com/yutto-dev/yutto"
 Issues = "https://github.com/yutto-dev/yutto/issues"
 
@@ -54,8 +54,6 @@ dev = [
 
 [tool.uv.sources]
 biliass = { workspace = true }
-
-
 
 [tool.uv.workspace]
 members = ["packages/*"]
