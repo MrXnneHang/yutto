@@ -1,3 +1,6 @@
 [submodule "tests/test_biliass/test_corpus"]
 	path = tests/test_biliass/test_corpus
 	url = https://github.com/yutto-dev/biliass-corpus.git
+[submodule "packages/uiya"]
+	path = packages/uiya
+	url = https://github.com/MrXnneHang/yutto-uiya.git
