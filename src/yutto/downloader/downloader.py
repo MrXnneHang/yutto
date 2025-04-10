@@ -323,15 +323,14 @@ async def start_downloader(
     will_download_audio = audio is not None and require_audio
 
     # 显示音视频详细信息
-    show_videos_info(
-        videos,
-        videos.index(video) if will_download_video else -1,  # pyright: ignore [reportArgumentType]
-    )
     show_audios_info(
         audios,
         audios.index(audio) if will_download_audio else -1,  # pyright: ignore [reportArgumentType]
     )
-
+    show_videos_info(
+        videos,
+        videos.index(video) if will_download_video else -1,  # pyright: ignore [reportArgumentType]
+    )
     output_format = ".mp4"
     if not will_download_video:
         if options["output_format_audio_only"] != "infer":
