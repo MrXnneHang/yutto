@@ -91,6 +91,7 @@ async def show_progress(file_buffers: list[AsyncFileBuffer], total_size: int):
 
         if num_blocks_in_buffer > num_blocks_in_buffer_threshold:
             Logger.debug(f"number blocks in buffer: {num_blocks_in_buffer}")
+        print("刷新")
         Logger.status.set(
             "{}{:>10}/{:>10} {:>12}  ".format(
                 bar + " " if bar else bar,
