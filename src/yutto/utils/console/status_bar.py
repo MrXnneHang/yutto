@@ -25,14 +25,14 @@ class StatusBar:
     @classmethod
     def clear(cls):
         if not cls._enabled:
-            print("cls is not enabled")
+            print("clear: cls is not enabled")
             return
         print("\r" + cls._last_line_width * " " + "\r", end="")
 
     @classmethod
     def set(cls, text: str):
         if not cls._enabled:
-            print("cls is not enabled")
+            print("set: cls is not enabled")
             return
         cls.clear()
         print(text, end="\r")
