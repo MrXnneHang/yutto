@@ -307,8 +307,8 @@ async def start_downloader(
     require_audio = options["require_audio"]
     metadata_format = options["metadata_format"]
     danmaku_options = options["danmaku_options"]
-    Logger.info(f"dev - 78d45910c")
-    Logger.info(f"开始处理视频! {filename}")
+    Logger.info(f"dev - 开始处理视频! {filename}")
+    Logger.info(f"flush_after_output")
     output_dir.mkdir(parents=True, exist_ok=True)
     tmp_dir.mkdir(parents=True, exist_ok=True)
     video_path = tmp_dir.joinpath(f"{filename}_video.m4s")

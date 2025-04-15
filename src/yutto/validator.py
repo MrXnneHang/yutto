@@ -29,7 +29,7 @@ def initial_validation(ctx: FetcherContext, args: argparse.Namespace):
     """初始化检查，仅执行一次"""
 
     if not args.no_progress:
-        Logger.info("不显示进度条.")
+        Logger.info("显示进度条.")
         Logger.enable_statusbar()
 
     # 在使用 --no-color 或者环境变量 NO_COLOR 非空时都应该不显示颜色
