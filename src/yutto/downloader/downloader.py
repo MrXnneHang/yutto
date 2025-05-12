@@ -194,7 +194,7 @@ def merge_video_and_audio(
 ):
     """合并音视频"""
 
-    ffmpeg = FFmpeg()
+    ffmpeg = FFmpeg(options["ffmpeg_path"])
     command_builder = FFmpegCommandBuilder()
     Logger.info("开始合并……")
 

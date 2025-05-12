@@ -231,6 +231,7 @@ class DownloadManager:
                 {
                     "output_dir": args.dir,
                     "tmp_dir": args.tmp_dir or args.dir,
+                    "ffmpeg_path": args.ffmpeg_path,
                     "require_video": args.require_video,
                     "require_chapter_info": args.require_chapter_info,
                     "video_quality": args.video_quality,

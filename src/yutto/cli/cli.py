@@ -163,6 +163,12 @@ def add_download_arguments(parser: argparse.ArgumentParser, settings: YuttoSetti
         type=path_from_cli,
         help="用来存放下载过程中临时文件的目录，默认为下载目录",
     )
+    group_basic.add_argument(
+        "--ffmpeg-path",
+        defualt=path_from_cli(settings.basic.ffmpeg_path),
+        type=path_from_cli,
+        help="ffmpeg 可执行文件路径，默认为系统 PATH 中的 ffmpeg",
+    )
     group_basic.add_argument("-c", "--sessdata", default=settings.basic.sessdata, help="Cookies 中的 SESSDATA 字段")
     group_basic.add_argument(
         "-tp", "--subpath-template", default=settings.basic.subpath_template, help="多级目录的存储路径模板"
