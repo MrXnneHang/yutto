@@ -28,6 +28,7 @@ if TYPE_CHECKING:
 
 
 class BangumiListItem(TypedDict):
+    url: str  # https://www.bilibili.com/bangumi/play/ep1448960
     id: int
     name: str
     cid: CId
@@ -71,12 +72,14 @@ async def get_bangumi_list(ctx: FetcherContext, client: AsyncClient, season_id: 
             # 如 https://www.bilibili.com/bangumi/play/ep409825 中的「次元发电机采访」
             # 和 https://www.bilibili.com/bangumi/play/ep424859 中的「编辑推荐」
             section_episodes += section["episodes"]
+
     return {
         "title": result["title"],
         "pages": [
             {
                 "id": i + 1,
                 "name": _bangumi_episode_title(item["title"], item["long_title"]),
+                "url": item["share_url"],
                 "cid": CId(str(item["cid"])),
                 "episode_id": EpisodeId(str(item["id"])),
                 "avid": BvId(item["bvid"]),

@@ -228,12 +228,13 @@ class ExtractorOptions(TypedDict):
 class EpisodeData(TypedDict):
     """剧集数据，包含了一个视频资源的基本信息以及相关资源"""
 
+    url: str
     videos: list[VideoUrlMeta]
     audios: list[AudioUrlMeta]
     subtitles: list[MultiLangSubtitle]
     metadata: MetaData | None
     danmaku: DanmakuData
-    cover_data: bytes | None
+    cover_link: str | None
     chapter_info_data: list[ChapterInfoData]
     path: Path
 
@@ -244,6 +245,7 @@ class DownloaderOptions(TypedDict):
     require_video: bool
     require_chapter_info: bool
     save_cover: bool
+    skip_download: bool
     video_quality: VideoQuality
     video_download_codec: VideoCodec
     video_save_codec: str

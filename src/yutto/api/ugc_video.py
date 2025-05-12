@@ -53,6 +53,7 @@ class _UgcVideoInfo(TypedDict):
 
 
 class UgcVideoListItem(TypedDict):
+    url: str  # https://www.bilibili.com/video/BV1vZ4y1M7mQ?p=1
     id: int
     name: str
     avid: AvId
@@ -161,6 +162,7 @@ async def get_ugc_video_list(ctx: FetcherContext, client: AsyncClient, avid: AvI
             "avid": avid,
             "cid": CId(str(item["cid"])),
             "metadata": _parse_ugc_video_metadata(video_info, page_info, is_first_page=i == 0),
+            "url": video_info["bvid"].to_url() + f"?p={i + 1}",
         }
         for i, (item, page_info) in enumerate(
             zip(cast("list[Any]", res_json["data"]), video_info["pages"], strict=True)
