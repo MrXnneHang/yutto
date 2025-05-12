@@ -165,7 +165,7 @@ def add_download_arguments(parser: argparse.ArgumentParser, settings: YuttoSetti
     )
     group_basic.add_argument(
         "--ffmpeg-path",
-        defualt=path_from_cli(settings.basic.ffmpeg_path),
+        default=path_from_cli(settings.basic.ffmpeg_path),
         type=path_from_cli,
         help="ffmpeg 可执行文件路径，默认为系统 PATH 中的 ffmpeg",
     )
