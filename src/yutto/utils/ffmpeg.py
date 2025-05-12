@@ -16,6 +16,7 @@ class FFmpegNotFoundError(Exception):
         super().__init__("请配置正确的 FFmpeg 路径")
 
 
+# TODO 用 basic settings 来控制 ffmpeg 的路径
 class FFmpeg(metaclass=Singleton):
     def __init__(self, ffmpeg_path: str = "ffmpeg"):
         try:

@@ -47,6 +47,7 @@ class YuttoBasicSettings(BaseModel):
     proxy: Annotated[str, Field("auto")]
     dir: Annotated[str, Field("./")]
     tmp_dir: Annotated[Optional[str], Field(None)]  # noqa: UP007
+    ffmpeg_path: Annotated[str, Field("ffmpeg")] # 默认使用系统 PATH 中的 ffmpeg
     sessdata: Annotated[str, Field("")]
     subpath_template: Annotated[str, Field("{auto}")]
     aliases: Annotated[dict[str, str], Field(dict[str, str]())]

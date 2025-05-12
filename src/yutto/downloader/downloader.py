@@ -194,7 +194,7 @@ def merge_video_and_audio(
 ):
     """合并音视频"""
 
-    ffmpeg = FFmpeg()
+    ffmpeg = FFmpeg(options["ffmpeg_path"])
     command_builder = FFmpegCommandBuilder()
     Logger.info("开始合并……")
 
@@ -313,6 +313,7 @@ async def start_downloader(
     Logger.info(f"开始处理视频 {filename}")
     output_dir.mkdir(parents=True, exist_ok=True)
     tmp_dir.mkdir(parents=True, exist_ok=True)
+    Logger.info(options["ffmpeg_path"])
     video_path = tmp_dir.joinpath(f"{filename}_video.m4s")
     audio_path = tmp_dir.joinpath(f"{filename}_audio.m4s")
     cover_path = tmp_dir.joinpath(f"{filename}_cover.jpg")

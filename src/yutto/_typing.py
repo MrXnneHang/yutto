@@ -242,6 +242,7 @@ class EpisodeData(TypedDict):
 class DownloaderOptions(TypedDict):
     output_dir: Path
     tmp_dir: Path
+    ffmpeg_path: Path
     require_video: bool
     require_chapter_info: bool
     save_cover: bool
