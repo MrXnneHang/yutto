@@ -10,6 +10,8 @@
 - [x] 支持包含复杂 query 链接的 `ugc_vido_list` p 的解析, 防止总是下载 `p1`. (已合入上游)
 - [x] `--ffmpeg-path` 支持指定 local_ffmpeg, 而并非总是使用环境变量下的 `ffmpeg`.
 - [x] release v0.0.1
+- [x] 重定义部分为 INFO 的 Logger 为 Custom.
+- [x] release v0.0.2-pre
 
 
 

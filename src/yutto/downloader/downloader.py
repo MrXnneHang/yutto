@@ -74,7 +74,7 @@ def show_videos_info(videos: list[VideoUrlMeta], selected: int):
         )
         if i == selected:
             log = colored_string(log, fore="blue")
-        Logger.info(log)
+        Logger.custom(log, badge=Badge("视频质量", fore="black", back="cyan"))
 
 
 def show_audios_info(audios: list[AudioUrlMeta], selected: int):
@@ -89,7 +89,7 @@ def show_audios_info(audios: list[AudioUrlMeta], selected: int):
         )
         if i == selected:
             log = colored_string(log, fore="magenta")
-        Logger.info(log)
+        Logger.custom(log, badge=Badge("音频质量", fore="black", back="cyan"))
 
 
 def create_mirrors_filter(banned_mirrors_pattern: str | None) -> Callable[[list[str]], list[str]]:
