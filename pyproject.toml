@@ -1,6 +1,6 @@
 [project]
 name = "uiya-yutto"
-version = "0.0.2-pre"
+version = "0.0.2-pre.1"
 description = "🧊 一个可爱且任性的 B 站视频下载器"
 readme = "README.md"
 requires-python = ">=3.10"
